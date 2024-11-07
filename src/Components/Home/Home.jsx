@@ -1,11 +1,14 @@
 import React from 'react';
 import afiaImg from "../../assets/Iffat-Ahmed-Afia_photo.png"
+import TextChange from '../TextChange';
 
 const Home = () => {
   return (
     <div className="text-white flex w-full justify-between items-start p-10 md:p-20">
         <div className="md:w-2/4 md:pt-10">
-          <h1 className="text-3xl md:text-6xl font-bold flex leading-normal tracking-tighter">Hello, I am Afia</h1>
+          <h1 className="text-3xl md:text-6xl font-bold flex leading-normal tracking-tighter">
+            <TextChange />
+          </h1>
           <p className="text-sm md:text-2xl tracking-tight">Lorem ipsum dolor sit amet, 
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
