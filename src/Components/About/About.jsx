@@ -11,11 +11,11 @@ const TAB_Data =[
     content: (
       <ul className="list-disc pl-2">
         <li>Programming Languages: Java, Python</li>
-        <li>Frontend:HTML5, Tailwind CSS, Bootstrap, React</li>
+        <li>Frontend: HTML5, Tailwind CSS, Bootstrap, React</li>
         <li>Backend: Nodejs, Laravel, .Net</li>
         <li>Database: MSSQL Server, MySQL</li>
         <li>Version Control: Git, GitHub</li>
-        <li>RPA:UIPath</li>
+        <li>RPA: UIPath</li>
         <li>Reporting: Power BI, SSRS</li>
         <li>Documentation: Lucid Chart, Diagram.net, Visio</li>
       </ul>
@@ -48,10 +48,10 @@ const About = () => {
   }
   return (
     
-    <div id="About" className="p-10 md:p-24 text-white">
-        <h1 className="text-2xl md:text-4xl font-bold">About</h1>
-        <div className="md:grid md:grid-cols-2 gap-4 items-center xl:gap-10 sm:py-16">
-          <img className="h-auto" src={afiaImg} width={500} height={500} alt="About Img Designed by Freepik" />
+    <div id="About" className="p-10 md:p-20 text-white">
+        <h1 className="text-2xl md:text-4xl font-bold border-b-4 border-[#0e7490] pb-2 inline-block">About</h1>
+        <div className="md:grid md:grid-cols-2 gap-4 items-center xl:gap-8 sm:py-12 mt-6 sm:mt-8">
+          <img className="h-auto mx-auto max-w-full" src={afiaImg} width={500} height={500} alt="About Img Designed by Freepik" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <p className="text-base lg:text-lg">
           A motivated and hardworking individual eager to explore, learn and leverage skills in a technical 

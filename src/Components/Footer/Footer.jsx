@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <div id="Footer" className="flex justify-around bg-[#0e7490] text-white p-10 md:p-12 items-center">
         <div>
-            <h1 className="text-2xl md:text-6xl font-bold">Get In Touch</h1>
-            <h3 className="text-sm md:text-xl font-normal p-3">Will love to get connected</h3>
+            <h1 className="text-xl md:text-6xl font-bold">Get In Touch</h1>
+            <h3 className="text-sm md:text-xl font-normal md:p-3">Will love to get connected</h3>
         </div>
         <ul className="text-sm md:text-xl">
             <li className="flex gap-1 items-center">
@@ -17,11 +17,11 @@ const Footer = () => {
             </li>
             <li className="flex gap-1 items-center">
                 <CiLinkedin />
-                username
+                https://www.linkedin.com/in/afia-ahmed/
             </li>
             <li className="flex gap-1 items-center">
                 <FaGithub />
-                github.com
+                https://github.com/Iffatahmedafia
             </li>
         </ul>
     </div>

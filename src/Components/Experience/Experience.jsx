@@ -4,10 +4,10 @@ import {FaCss3, FaFigma, FaHtml5, FaJs} from "react-icons/fa";
 
 const Experience = () => {
   return (
-    <div id="Experience" className="p-10 md:p-24">
-        <h1 className="text-2xl md:text-4xl text-white font-bold">Experience</h1>
+    <div id="Experience" className="p-10 md:p-20">
+        <h1 className="text-2xl md:text-4xl text-white font-bold border-b-4 border-[#0e7490] pb-2 inline-block">Experience</h1>
         <div className="flex flex-wrap py-12 px-8 items-center justify-around">
-            <div className="flex gap-5 bg-slate-950 bg-opacity-45 mt-3 rounded-lg p-8 items-center">
+            <div className="flex gap-5 bg-slate-950 bg-opacity-45 mt-3 rounded-lg p-8 items-center shadow-lg hover:shadow-2xl hover:bg-[#0e7490] rounded-2xl transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-[#0e7490] duration-300">
                 <span className="text-white">
                     <h1 className="leading-tight font-semibold pb-2"> Junior RPA Developer, DHL APSSC</h1>
                     <p className="text-sm leading-tight font-thin">September 2022 - October 2023</p>
@@ -20,7 +20,7 @@ const Experience = () => {
                     </ul>
                 </span>
             </div>
-            <div className="flex gap-5 bg-slate-950 bg-opacity-45 mt-3 rounded-lg p-8 items-center">
+            <div className="flex gap-5 bg-slate-950 bg-opacity-45 mt-3 rounded-lg p-8 items-center shadow-lg hover:shadow-2xl hover:bg-[#0e7490] rounded-2xl transform transition-transform hover:scale-105 hover:shadow-2xl hover:bg-[#0e7490] duration-300">
                 <span className="text-white">
                     <h1 className="leading-tight font-semibold pb-2">Web Developer Intern, HomeCrowd Sdn Bhd</h1>
                     <p className="text-sm leading-tight font-thin">February 2022 - July 2022</p>
