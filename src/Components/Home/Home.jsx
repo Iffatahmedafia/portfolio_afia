@@ -37,7 +37,7 @@ const Home = () => {
         <h1 className="text-3xl md:text-6xl font-bold flex leading-normal tracking-tighter">
           <TextChange />
         </h1>
-        <p className="text-sm md:text-2xl tracking-tight">
+        <p className="text-sm md:text-2xl tracking-tight mt-4">
           I am an experienced Web Developer having expertise in RPA as well.
           I am currently based in Canada and exploring opportunity in relevant sectors.
         </p>

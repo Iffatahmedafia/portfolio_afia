@@ -2,7 +2,7 @@
 import React, { useTransition, useState } from 'react';
 import {IoArrowForward} from "react-icons/io5";
 import TabButton from '../TabButton';
-import afiaImg from "../../assets/photo_2.png"
+import afiaImg from "../../assets/Afia_13.jpg"
 
 const TAB_Data =[
   {
@@ -50,7 +50,7 @@ const About = () => {
     
     <div id="About" className="p-10 md:p-20 text-white">
         <h1 className="text-2xl md:text-4xl font-bold border-b-4 border-[#0e7490] pb-2 inline-block">About</h1>
-        <div className="md:grid md:grid-cols-2 gap-4 items-center xl:gap-8 sm:py-12 mt-6 sm:mt-8">
+        <div className="md:flex md:items-start gap-10 sm:py-12 mt-6 sm:mt-8">
           <img className="h-auto mx-auto max-w-full" src={afiaImg} width={500} height={500} alt="About Img Designed by Freepik" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <p className="text-base lg:text-lg">
