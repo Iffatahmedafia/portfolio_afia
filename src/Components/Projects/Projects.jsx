@@ -7,16 +7,19 @@ const Projects = () => {
         <h1 className="text-2xl md:text-4xl text-white font-bold border-b-4 border-[#0e7490] pb-2 inline-block">Projects</h1>
         <div className="py-12 px-8 flex flex-wrap gap-5 justify-around">
           <ProjectCard 
-          title="Hit Calculator" 
-          main="Python, Odds API, Airtable" 
+          title = "Hit Calculator Application" 
+          main = "Python, Odds API, Airtable" 
+          link = "https://github.com/attiqRahman/Odds_api"
           />
           <ProjectCard 
           title="Mental Health Website" 
-          main="Laravel, HTML5, CSS, Bootstrap, MySQL" 
+          main="Laravel, HTML5, CSS, Bootstrap, MySQL"
+          link = "https://github.com/Iffatahmedafia/MentalHealthWebsite"
           />
           <ProjectCard 
           title="Journey Planner" 
-          main="Python, Algorithm, gmplot" 
+          main="Python, Algorithm, gmplot"
+          link = "https://github.com/Iffatahmedafia/JourneyPlanner"
           />
 
         </div>

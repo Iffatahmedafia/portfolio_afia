@@ -27,10 +27,10 @@ const TAB_Data =[
     content: (
       <ul className="list-disc pl-2">
         <li>Like to stay organized and do proper planning of my tasks</li>
-        <li>Fast Learner</li>
+        <li>Fast Learner and can work independently</li>
         <li>Good Team Player</li>
-        <li>Love learning new technologies and tools</li>
-        <li>Punctual</li>
+        <li>Love learning new technologies and tools and can adapt very easily</li>
+        <li>Punctual on deadlines</li>
       </ul>
     )
   }

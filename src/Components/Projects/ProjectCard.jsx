@@ -28,9 +28,11 @@ export const ProjectCard = (props) => {
           {props.main}
         </p>
         <div className="mt-4 p-2 md:p-4 flex gap-4">
+        <a href={props.link} target="_blank" rel="noopener noreferrer">
           <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 font-semibold rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 hover:scale-105 duration-300">
             Source Code
           </button>
+        </a>
           {/* Uncomment if needed */}
           {/* <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 font-semibold rounded-3xl bg-gradient-to-r from-purple-500 to-pink-600 hover:opacity-90 hover:scale-105 duration-300">
             Demo
