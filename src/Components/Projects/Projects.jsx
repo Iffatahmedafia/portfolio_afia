@@ -1,21 +1,60 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { ProjectCard } from './ProjectCard';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Projects = () => {
   const scrollRef = useRef();
+  const [pageCount, setPageCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(2); // default for mobile
 
-  const scroll = (direction) => {
+  // Responsive card count
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setCardsPerPage(3); // desktop
+      } else if (window.innerWidth >= 640) {
+        setCardsPerPage(3); // tablets
+      } else {
+        setCardsPerPage(1); // small mobile
+      }
+    };
+
+    handleResize(); // call on load
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const scrollToPage = (page) => {
     const container = scrollRef.current;
     if (container) {
-      const scrollAmount = container.offsetWidth; // scroll by full view width
-      const newPos = direction === 'left'
-        ? container.scrollLeft - scrollAmount
-        : container.scrollLeft + scrollAmount;
-
+      const card = container.querySelector('.project-card');
+      const cardWidth = card?.offsetWidth ?? 300;
       container.scrollTo({
-        left: newPos,
+        left: page * cardWidth * cardsPerPage + page * 20, // account for gap
         behavior: 'smooth',
       });
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container) {
+      const totalCards = container.querySelectorAll('.project-card').length;
+      setPageCount(Math.ceil(totalCards / cardsPerPage));
+    }
+  }, [cardsPerPage]);
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const card = container.querySelector('.project-card');
+      const cardWidth = card?.offsetWidth ?? 300;
+      const page = Math.round(container.scrollLeft / (cardWidth * cardsPerPage));
+      setCurrentPage(page);
     }
   };
 
@@ -24,65 +63,48 @@ const Projects = () => {
       <h1 className="text-2xl md:text-4xl font-bold border-b-4 border-[#0e7490] pb-2 inline-block">
         Projects
       </h1>
-
-      {/* Card Container */}
-      <div
-        ref={scrollRef}
-        className="overflow-x-auto scroll-smooth whitespace-nowrap my-8"
-      >
-        <div className="flex gap-4">
-          {[
-            {
-              title: "Shop Local",
-              main: "React, Django, PostgreSQL",
-              link: "https://github.com/Iffatahmedafia/ShopLocal.git",
-            },
-            {
-              title: "Personal Task Manager",
-              main: "React, Node.js, MongoDB",
-              link: "https://github.com/Iffatahmedafia/PersonalTaskManager.git",
-            },
-            {
-              title: "Hit Calculator Application",
-              main: "Python, REST APIs, Airtable",
-              link: "https://github.com/attiqRahman/Odds_api",
-            },
-            {
-              title: "Mental Health Website",
-              main: "Laravel, HTML5, CSS, Bootstrap, MySQL",
-              link: "https://github.com/Iffatahmedafia/MentalHealthWebsite",
-            },
-            {
-              title: "Journey Planner",
-              main: "Python, Algorithm, gmplot",
-              link: "https://github.com/Iffatahmedafia/JourneyPlanner",
-            }
-          ].map((project, index) => (
-            <div
-              key={index}
-              className="shrink-0 w-full sm:w-[80%] md:w-[50%] lg:w-[33%]"
+      <Swiper
+            spaceBetween={20}
+            slidesPerView={2} // Show 2 slides on small screens
+            breakpoints={{
+              768: { slidesPerView: 3 }, // Show 4 slides on larger screens
+            }}
+            pagination={{ clickable: true }}
+            modules={[Pagination]}
+            className="pb-16" // Space for dots
             >
-              <ProjectCard {...project} />
-            </div>
+          {[
+            { title: "Shop Local", main: "React, Django, PostgreSQL", link: "https://github.com/Iffatahmedafia/ShopLocal.git" },
+            { title: "Personal Task Manager", main: "React, Node.js, MongoDB", link: "https://github.com/Iffatahmedafia/PersonalTaskManager.git" },
+            { title: "Hit Calculator Application", main: "Python, REST APIs, Airtable", link: "https://github.com/attiqRahman/Odds_api" },
+            { title: "Mental Health Website", main: "Laravel, HTML5, CSS, Bootstrap, MySQL", link: "https://github.com/Iffatahmedafia/MentalHealthWebsite" },
+            { title: "Journey Planner", main: "Python, Algorithm, gmplot", link: "https://github.com/Iffatahmedafia/JourneyPlanner" },
+          ].map((proj, idx) => (
+            <SwiperSlide key={idx}>
+              <ProjectCard {...proj} />
+            </SwiperSlide>  
           ))}
-        </div>
-      </div>
+      </Swiper>
+      {/* Swiper Pagination - Inline Style */}
+      <style>
+            {`
+              .swiper-pagination {
+                position: relative !important;
+                margin-top: 15px;
+              }
 
-      {/* Prev / Next buttons */}
-      <div className="flex justify-center gap-4 mt-4">
-        <button
-          onClick={() => scroll('left')}
-          className="bg-[#0e7490] px-4 py-2 rounded text-white hover:bg-[#0891b2]"
-        >
-          ⬅️ Prev
-        </button>
-        <button
-          onClick={() => scroll('right')}
-          className="bg-[#0e7490] px-4 py-2 rounded text-white hover:bg-[#0891b2]"
-        >
-          Next ➡️
-        </button>
-      </div>
+              .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                opacity: 0.5;
+                transition: all 0.3s ease;
+              }
+
+              .swiper-pagination-bullet-active {
+                opacity: 1;
+              }
+            `}
+          </style> 
     </div>
   );
 };

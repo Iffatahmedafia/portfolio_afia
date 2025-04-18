@@ -2,14 +2,14 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <div id="Experience" className="p-6 md:p-12">
+    <div id="Experience" className="p-10 md:p-20">
       <h1 className="text-2xl md:text-4xl text-white font-bold border-b-4 border-[#0e7490] pb-2 inline-block">
         Experience
       </h1>
 
-      <div className="flex flex-col items-center gap-6 mt-10">
+      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 mt-10">
         {/* CARD 1 */}
-        <div className="w-full max-w-4xl bg-slate-950 bg-opacity-45 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:bg-[#0e7490] transition-transform transform hover:scale-105 duration-300">
+        <div className="min-h-[320px] w-full max-w-4xl bg-slate-950 bg-opacity-45 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:bg-[#0e7490] transition-transform transform hover:scale-105 duration-300">
           <h1 className="text-white leading-tight font-semibold pb-2">
             Full Stack Software Engineer (Remote), Integrate Tech Solution
           </h1>
@@ -23,7 +23,7 @@ const Experience = () => {
         </div>
 
         {/* CARD 2 */}
-        <div className="w-full max-w-4xl bg-slate-950 bg-opacity-45 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:bg-[#0e7490] transition-transform transform hover:scale-105 duration-300">
+        <div className="min-h-[320px] w-full max-w-4xl bg-slate-950 bg-opacity-45 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:bg-[#0e7490] transition-transform transform hover:scale-105 duration-300">
           <h1 className="text-white leading-tight font-semibold pb-2">
             Junior RPA Developer, DHL APSSC
           </h1>
@@ -38,7 +38,7 @@ const Experience = () => {
         </div>
 
         {/* CARD 3 */}
-        <div className="w-full max-w-4xl bg-slate-950 bg-opacity-45 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:bg-[#0e7490] transition-transform transform hover:scale-105 duration-300">
+        <div className="min-h-[320px] w-full max-w-4xl bg-slate-950 bg-opacity-45 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:bg-[#0e7490] transition-transform transform hover:scale-105 duration-300">
           <h1 className="text-white leading-tight font-semibold pb-2">
             Web Developer Intern, HomeCrowd Sdn Bhd
           </h1>
