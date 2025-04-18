@@ -6,9 +6,19 @@ const Projects = () => {
     <div id="Projects" className="p-10 md:p-20 text-white">
         <h1 className="text-2xl md:text-4xl text-white font-bold border-b-4 border-[#0e7490] pb-2 inline-block">Projects</h1>
         <div className="py-12 px-8 flex flex-wrap gap-5 justify-around">
+        <ProjectCard 
+          title = "Shop Local" 
+          main = "React, Django, PostgreSQL" 
+          link = "https://github.com/Iffatahmedafia/ShopLocal.git"
+          />
+          <ProjectCard 
+          title = "Personal Task Manager" 
+          main = "React, Node.js, MongoDB" 
+          link = "https://github.com/Iffatahmedafia/PersonalTaskManager.git"
+          />
           <ProjectCard 
           title = "Hit Calculator Application" 
-          main = "Python, Odds API, Airtable" 
+          main = "Python, REST APIs, Airtable" 
           link = "https://github.com/attiqRahman/Odds_api"
           />
           <ProjectCard 
