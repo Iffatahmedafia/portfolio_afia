@@ -71,18 +71,20 @@ const Projects = () => {
             }}
             pagination={{ clickable: true }}
             modules={[Pagination]}
-            className="pb-16" // Space for dots
+            className="pb-16 overflow-visible" // Space for dots
             >
           {[
-            { title: "Shop Local", main: "React, Django, PostgreSQL", link: "https://github.com/Iffatahmedafia/ShopLocal.git" },
+            { title: "Shop Local", main: "React, Django, PostgreSQL, LLM", link: "https://github.com/Iffatahmedafia/ShopLocal.git" },
             { title: "Personal Task Manager", main: "React, Node.js, MongoDB", link: "https://github.com/Iffatahmedafia/PersonalTaskManager.git" },
             { title: "Hit Calculator Application", main: "Python, REST APIs, Airtable", link: "https://github.com/attiqRahman/Odds_api" },
             { title: "Mental Health Website", main: "Laravel, HTML5, CSS, Bootstrap, MySQL", link: "https://github.com/Iffatahmedafia/MentalHealthWebsite" },
             { title: "Journey Planner", main: "Python, Algorithm, gmplot", link: "https://github.com/Iffatahmedafia/JourneyPlanner" },
           ].map((proj, idx) => (
-            <SwiperSlide key={idx}>
-              <ProjectCard {...proj} />
-            </SwiperSlide>  
+            <SwiperSlide key={idx} className="overflow-visible">
+              <div className="p-2 md:p-3"> {/* Optional padding to prevent edge clipping */}
+                <ProjectCard {...proj} />
+              </div>
+            </SwiperSlide>
           ))}
       </Swiper>
       {/* Swiper Pagination - Inline Style */}

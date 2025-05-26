@@ -10,11 +10,15 @@ const TAB_Data =[
     id: "technical",
     content: (
       <ul className="list-disc pl-2">
-        <li>Programming Languages: Java, Python, Javascript</li>
-        <li>Frontend: React, Tailwind CSS, Bootstrap</li>
-        <li>Backend: Django, Nodejs, Laravel</li>
+        <li>Programming Languages: Python, Java, Javascript</li>
+        <li>Frontend: React.js, Tailwind CSS, Bootstrap</li>
+        <li>Backend: Django, Node.js, Laravel</li>
         <li>Database: MSSQL Server, PostgreSQL, MongoDB</li>
         <li>Version Control: Git, GitHub</li>
+        <li>AI & ML: HuggingFace Transformers,
+            FAISS, Langchain, NLP, LLMs (finetuning
+            & integration)</li>
+        <li>DevOps & Cloud: AWS, Docker</li>
         <li>RPA: UIPath</li>
         <li>Reporting: Power BI, SSRS</li>
       </ul>
@@ -53,11 +57,11 @@ const About = () => {
           <img className="h-auto mx-auto max-w-full" src={afiaImg} width={500} height={500} alt="About Img Designed by Freepik" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <p className="text-base lg:text-lg">
-          I am a highly adaptable and dedicated professional with strong expertise in software development and
-          automation (RPA). I am always eager to learn new things and constantly strive to stay updated with the latest
-          technologies. I thrive in both collaborative team environments and independent roles demonstrating reliability.
-          My experience spans web development, process automation, data visualization, and documentation with a clear
-          focus on creating scalable, efficient, and optimized solutions.
+            I am a highly adaptable and dedicated professional with strong expertise in software development, AI and
+            automation (RPA). I am always eager to learn new things and constantly strive to stay updated with the latest
+            technologies. I thrive in both collaborative team environments and independent roles demonstrating reliability.
+            My experience spans web development, process automation, data visualization, and documentation with a clear
+            focus on creating scalable, efficient, and optimized solutions.
           </p>
           <div className="flex flex-row justify-start text-xl font-semibold mt-8">
          
