@@ -3,7 +3,12 @@ import { useState, useEffect } from "react"
 
 const TextChange = () => {
 
-    const texts=["Hi, I'm Afia", "Hi, I'm Web Developer", "Hi, I love Coding"];
+    const texts = [
+      "Hi, I'm Afia",
+      "Full Stack & AI Developer",
+      "Building Scalable Web Applications",
+      "Creating AI-Powered Solutions"
+    ];
     const [currentText, setCurrentText] = useState("");
     const [endValue, setEndValue] = useState(1);
     const [isForward, setIsForward] = useState(true);
