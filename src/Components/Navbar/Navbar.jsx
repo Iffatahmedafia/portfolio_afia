@@ -83,7 +83,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       <nav
         className={`max-w-7xl mx-auto rounded-2xl border backdrop-blur-md shadow-sm transition-all duration-300 ${
           isLight
-            ? "bg-white/80 border-slate-200"
+            ? "bg-white/80 border-slate-300"
             : "bg-slate-900/80 border-slate-800"
         }`}
       >

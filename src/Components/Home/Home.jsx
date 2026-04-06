@@ -1,7 +1,7 @@
 import React from "react";
 import afiaImg from "../../assets/photo_5.png";
 import TextChange from "../TextChange";
-import CV from "../../assets/Iffat_Ahmed_Afia_CV.pdf";
+import CV from "../../assets/Afia_CV.pdf";
 
 const Home = ({ theme }) => {
   const isLight = theme === "light";
@@ -16,7 +16,7 @@ const Home = ({ theme }) => {
           <div
             className={`inline-flex items-center rounded-full border px-4 py-2 text-sm font-medium mb-4 ${
               isLight
-                ? "bg-white border-slate-300 text-sky-600"
+                ? "bg-white border-cyan-500 text-sky-600"
                 : "bg-slate-900 border-slate-800 text-cyan-300"
             }`}
           >

@@ -11,7 +11,7 @@ const Footer = ({ theme }) => {
       id="Footer"
       className={`relative overflow-hidden py-10 md:py-12 px-6 md:px-12 ${
         isLight
-          ? "bg-gradient-to-r from-cyan-700 to-sky-600 text-white"
+          ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
           : "bg-gradient-to-r from-slate-950 via-cyan-950 to-blue-950 text-white"
       }`}
     >

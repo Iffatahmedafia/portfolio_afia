@@ -70,7 +70,7 @@ const Skills = ({ theme }) => {
                     key={skill}
                     className={`px-4 py-2 rounded-full text-sm font-medium border transition duration-300 ${
                       isLight
-                        ? "bg-slate-50 border-slate-300 text-slate-700 hover:bg-sky-50 hover:border-sky-300"
+                        ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:opacity-90 hover:scale-105 duration-300 border-slate-300"
                         : "bg-slate-950 border-slate-800 text-slate-200 hover:border-cyan-400 hover:bg-slate-800"
                     }`}
                   >

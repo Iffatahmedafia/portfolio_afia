@@ -1,2 +1,5 @@
 # portfolio_afia
-Portfolio Website using React deployed in Github Pages
+Modern and Responsive Portfolio Website 
+
+Language:React.js
+Deployment:Github Pages
