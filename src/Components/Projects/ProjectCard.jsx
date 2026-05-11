@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 export const ProjectCard = ({
   title,
@@ -11,6 +12,7 @@ export const ProjectCard = ({
   category,
 }) => {
   const isLight = theme === "light";
+  const hasCodeLink = Boolean(link && !link.startsWith("YOUR_"));
 
   return (
     <div
@@ -73,15 +75,17 @@ export const ProjectCard = ({
         </div>
 
         <div className="mt-6 flex gap-3 flex-wrap">
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <button className="inline-flex items-center gap-2 rounded-3xl bg-gradient-to-r from-cyan-600 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:opacity-90">
-              <FaGithub size={14} />
-              Code
-            </button>
-          </a>
-
           {demo && (
             <a href={demo} target="_blank" rel="noopener noreferrer">
+              <button className="inline-flex items-center gap-2 rounded-3xl bg-gradient-to-r from-cyan-600 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:opacity-90">
+                <FiExternalLink size={14} />
+                Live Demo
+              </button>
+            </a>
+          )}
+
+          {hasCodeLink && (
+            <a href={link} target="_blank" rel="noopener noreferrer">
               <button
                 className={`inline-flex items-center gap-2 rounded-3xl border px-5 py-2.5 text-sm font-semibold transition duration-300 hover:scale-105 ${
                   isLight
@@ -89,7 +93,8 @@ export const ProjectCard = ({
                     : "border-slate-700 text-white hover:bg-slate-800"
                 }`}
               >
-                Live Demo
+                <FaGithub size={14} />
+                Code
               </button>
             </a>
           )}

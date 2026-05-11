@@ -82,48 +82,28 @@ const Home = ({ theme }) => {
 
         <div className="flex justify-center lg:justify-end">
           <div
-            className={`relative rounded-[2rem] p-4 shadow-lg border max-w-sm w-full transition duration-300 ${
+            className={`relative overflow-hidden rounded-[1.5rem] border max-w-sm w-full shadow-lg transition duration-300 ${
               isLight
-                ? "bg-white border-slate-200"
-                : "bg-slate-900 border-slate-800"
+                ? "bg-white border-slate-200 shadow-slate-200"
+                : "bg-slate-900 border-slate-800 shadow-slate-950"
             }`}
           >
             <div
-              className={`absolute inset-0 rounded-[2rem] blur-2xl opacity-10 ${
-                isLight ? "bg-sky-200" : "bg-cyan-500"
+              className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-600 to-blue-600`}
+            ></div>
+
+            <div
+              className={`absolute inset-0 opacity-0 transition duration-300 hover:opacity-10 ${
+                isLight ? "bg-sky-200" : "bg-cyan-400"
               }`}
             ></div>
 
             <div className="relative">
               <img
-                className="w-full h-[320px] sm:h-[360px] object-cover rounded-[1.5rem]"
+                className="w-full h-[340px] sm:h-[400px] object-cover object-top"
                 src={afiaImg}
                 alt="Afia Ahmed"
               />
-
-              <div
-                className={`mt-4 rounded-2xl p-4 border ${
-                  isLight
-                    ? "bg-slate-50 border-slate-200"
-                    : "bg-slate-950 border-slate-800"
-                }`}
-              >
-                <p
-                  className={`text-sm font-medium ${
-                    isLight ? "text-slate-500" : "text-slate-400"
-                  }`}
-                >
-                  Focus Areas
-                </p>
-                <p
-                  className={`mt-2 text-sm sm:text-base font-semibold leading-7 ${
-                    isLight ? "text-slate-800" : "text-slate-200"
-                  }`}
-                >
-                  Full Stack Development, REST
-                  APIs, AI/ML Integration and Automation
-                </p>
-              </div>
             </div>
           </div>
         </div>
