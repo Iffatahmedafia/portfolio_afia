@@ -25,13 +25,13 @@ const skillGroups = [
     title: "AI / ML",
     Icon: FaBrain,
     accent: "cyan",
-    skills: ["LLMs", "LangChain", "FAISS", "Hugging Face"],
+    skills: ["LLMs", "LangChain", "RAG", "FAISS", "Hugging Face"],
   },
   {
     title: "Databases",
     Icon: FaDatabase,
     accent: "cyan",
-    skills: ["PostgreSQL", "MongoDB", "MS SQL Server"],
+    skills: ["PostgreSQL", "MongoDB", "Supabase"],
   },
   {
     title: "Tools & Cloud",

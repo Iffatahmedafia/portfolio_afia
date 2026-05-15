@@ -8,7 +8,7 @@ const experiences = [
     bullets: [
         "Built AI-driven applications including a property valuation system using machine learning and scalable backend APIs.",
         "Developed automation pipelines for web scraping and data processing to streamline real-world workflows.",
-        "Delivered full-stack solutions using React, FastAPI, and PostgreSQL with a focus on performance and usability.",
+        "Delivered full-stack solutions using React, Next.js, Node.js, FastAPI, and PostgreSQL with a focus on performance and usability.",
     ],
   },
   {
